@@ -3,7 +3,8 @@
 using namespace std;
 
 bool validTriangle(int a, int b, int c){
-    if (a + b > c && a + c > b && b + c > a){ return true; }
+    long int la = a, lb = b, lc = c;
+    if (la + lb > lc && la + lc > lb && lb + lc > la){ return true; }
     return false;
 }
 
