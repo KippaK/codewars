@@ -8,16 +8,19 @@ string removeLeadingZeros(string str) {
     while (str[0] == '0') {
         str.erase(str.begin());
     }
+    if (str.length() == 0){
+      return "0";
+    }
     return str;
 }
 
-string sumInBinary(int a, int b){
-    int num = a + b;
-    return removeLeadingZeros(bitset<32>(num).to_string());
+string sumInBinary(uint64_t a, uint64_t b){
+    uint64_t sum = a + b;
+    return removeLeadingZeros(bitset<64>(sum).to_string());
 }
 
 int main(){
-    int a, b;
+    uint64_t a, b;
     cout << "Enter a number: ";
     cin >> a;
     cout << "Enter another number: ";
